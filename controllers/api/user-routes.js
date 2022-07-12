@@ -3,7 +3,7 @@ const {
   User,
   Post,
   Comment,
-} = require("/../Users/nmsiegel/Challenges/14/Tech-Blog/models");
+} = require("../../models");
 
 // GET /api/users
 router.get("/", (req, res) => {
@@ -91,7 +91,7 @@ router.post("/login", (req, res) => {
 
 //PUT /api/users/:id
 router.put("/:id", (req, res) => {
-  //expects any of the following {'username': '', 'email': '', 'password': ''}
+  //expects any these {'username': '', 'email': '', 'password': ''}
   User.update(req.body, {
     individualHooks: true,
     where: {
