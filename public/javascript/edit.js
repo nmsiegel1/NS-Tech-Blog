@@ -2,7 +2,7 @@ async function editFormHandler(event) {
   event.preventDefault();
 
   const title = document.querySelector('input[name="post-title"]').value;
-  const body = document.querySelector('textarea[name="post-body"]').value;
+  const post_text = document.querySelector('textarea[name="post-body"]').value;
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
@@ -11,7 +11,7 @@ async function editFormHandler(event) {
     method: "PUT",
     body: JSON.stringify({
       title,
-      body,
+      post_text,
     }),
     headers: {
       "Content-Type": "application/json",

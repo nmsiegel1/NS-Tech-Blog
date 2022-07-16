@@ -1,37 +1,39 @@
 <article>
-    <a href="/dashboard">&larr; Back to dashboard</a>
-    <div class="card">
+    <a href="/dashboard"> Back to dashboard</a>
+    <div class="card w-80 p-2 mb-2">
+      <div class="card-body">
     <h2>Edit post</h2>
     <form class="edit-post-form">
         <div class="container">
-          <div class="row">
+          <div class="row mb-2">
             <input name="post-title" type="text" value="{{post.title}}"/>
         </div>
         <div class="row">
-            <input name="post-body" type="text" value="{{post.post_text}}"/>            |
+            <input name="post-text" type="text" value="{{post.post_text}}"/>            |
         </div>
         </div>
-        <div>by you on {{format_date post.created_at}}
-                    |
-                    <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment"
-                        post.comments.length}}</a>
+        <div class="mb-2">
+          by you on {{format_date post.created_at}}
+          |
+          <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment"
+          post.comments.length}}</a>
         </div>
-        <button id="save" class="edit-btn" type="submit">Save post</button>
-        <button id="delete" class="delete-btn" type="button">Delete post</button>
+        <button id="save" class="btn edit-btn" type="submit">Save post</button>
+        <button id="delete" class="btn delete-btn" type="button">Delete post</button>
     </form>
     </div>
 </div>
 </article>
 
-<div class="card">
-  <div class="card=body">
+<div class="card w-80 p-2 mb-2">
+  <div class="card-body">
 <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
   </div>
 
   <div>
-    <button id="comment-btn" type="submit">add comment</button>
+    <button id="comment-btn" class="btn" type="submit">add comment</button>
   </div>
 </form>
   </div>
