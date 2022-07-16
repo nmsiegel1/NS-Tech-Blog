@@ -28,5 +28,5 @@ async function commentFormHandler(event) {
 }
 
 document
-  .querySelector(".comment-btn")
+  .querySelector(".comment-form")
   .addEventListener("submit", commentFormHandler);

@@ -67,6 +67,9 @@ router.get("/:id", (req, res) => {
 //POST api/posts/
 router.post("/", withAuth, (req, res) => {
   //expects {"title": "", "post_text": "", "user_id": ""}
+  console.log(
+    JSON.stringify(req.body.title, req.body.post_text, req.session.user_id)
+  );
   Post.create({
     title: req.body.title,
     post_text: req.body.post_text,
@@ -106,7 +109,7 @@ router.put("/:id", withAuth, (req, res) => {
 });
 
 //DELETE api/posts/:id
-router.delete("/:id", withAuth, (req, res) => {
+router.delete("/:id", (req, res) => {
   Post.destroy({
     where: {
       id: req.params.id,
