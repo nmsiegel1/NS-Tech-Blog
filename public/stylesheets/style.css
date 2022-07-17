@@ -107,3 +107,7 @@ textarea {
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
 }
+
+.comments {
+  text-decoration: underline;
+}

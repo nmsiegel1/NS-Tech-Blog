@@ -1,13 +1,13 @@
 <div class="card w-80 p-2 mb-2">
-  <div class="comments">
+  <div>
     {{#each this}}
-      <section class="comment mb3">
-        <div class="meta">
+      <section>
+        <div class="comments">
           {{user.username}}
           on
           {{format_date created_at}}
         </div>
-        <div class="text">
+        <div>
           {{comment_text}}
         </div>
       </section>
